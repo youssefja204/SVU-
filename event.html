@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تفاصيل الفعالية – دليل الجامعة الافتراضية</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
+      <div class="brand-logo"><i class="bi bi-mortarboard-fill"></i></div>
+      <span class="brand-name">دليل الفعاليات</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link active" href="events.html">كل الفعاليات</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="container py-4 pb-5">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb" style="font-family:'Cairo',sans-serif;font-size:.88rem">
+      <li class="breadcrumb-item"><a href="index.html" style="color:var(--primary)">الرئيسية</a></li>
+      <li class="breadcrumb-item"><a href="events.html" style="color:var(--primary)">الفعاليات</a></li>
+      <li class="breadcrumb-item active">معرض الفنون التشكيلية</li>
+    </ol>
+  </nav>
+
+  <div class="row g-4">
+
+    <!-- LEFT: Main Content -->
+    <div class="col-12 col-lg-8">
+
+      <!-- Hero Image -->
+      <div class="event-hero">
+        <div class="event-hero-placeholder bg-culture">🎨</div>
+        <div style="position:absolute;top:1rem;right:1rem;">
+          <span class="badge bg-success fs-6 px-3 py-2" style="font-family:'Cairo',sans-serif;">ثقافي</span>
+        </div>
+      </div>
+
+      <!-- Title & Actions -->
+      <div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-3">
+        <h1 style="font-family:'Cairo',sans-serif;font-size:1.8rem;color:var(--text)">معرض الفنون التشكيلية الجامعي</h1>
+        <div class="d-flex gap-2 flex-wrap">
+          <!-- Add to Calendar -->
+          <button class="btn btn-outline-success btn-sm" onclick="addToCalendar()" style="font-family:'Cairo',sans-serif;font-weight:600">
+            <i class="bi bi-calendar-plus me-1"></i> أضف للتقويم
+          </button>
+          <!-- Share -->
+          <button class="btn btn-outline-secondary btn-sm" onclick="shareEvent()" style="font-family:'Cairo',sans-serif;font-weight:600">
+            <i class="bi bi-share me-1"></i> شارك
+          </button>
+          <!-- Reserve Modal -->
+          <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#reserveModal" style="font-family:'Cairo',sans-serif;">
+            <i class="bi bi-ticket-perforated me-1"></i> احجز مكانك
+          </button>
+        </div>
+      </div>
+
+      <!-- Alert placeholder -->
+      <div id="eventAlert"></div>
+
+      <!-- Description -->
+      <div class="mb-4">
+        <h4 style="font-family:'Cairo',sans-serif;color:var(--primary);margin-bottom:.75rem">📋 عن الفعالية</h4>
+        <p>يُعدّ معرض الفنون التشكيلية الجامعي من أبرز الفعاليات الثقافية السنوية التي تنظمها الجامعة الافتراضية السورية، إذ يُجمع أعمال فنية متنوعة من رسم وتصوير فوتوغرافي وفن رقمي لطلاب كلية الفنون وسائر الكليات المشاركة.</p>
+        <p class="mt-2">يهدف المعرض إلى إبراز المواهب الفنية لدى الطلاب وتشجيعهم على التعبير الإبداعي، ويُتاح للزوار من أبناء الجامعة والمجتمع المحيط بها، كما يتضمن ورش عمل فنية تفاعلية طوال أيام انعقاده.</p>
+        <p class="mt-2">يمتد المعرض لمدة أسبوع كامل ويضم أكثر من 150 عملاً فنياً، مع جوائز للأعمال الأكثر إبداعاً في كل تصنيف.</p>
+      </div>
+
+      <!-- Image Gallery -->
+      <div class="mb-4">
+        <h4 style="font-family:'Cairo',sans-serif;color:var(--primary);margin-bottom:.75rem">🖼️ معرض الصور</h4>
+        <div class="gallery-grid">
+          <div class="bg-culture">🎨</div>
+          <div class="bg-music" style="height:110px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🖼️</div>
+          <div class="bg-family" style="height:110px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">✏️</div>
+          <div class="bg-tech" style="height:110px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🖌️</div>
+          <div class="bg-sport" style="height:110px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">📷</div>
+          <div class="bg-culture" style="height:110px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🎭</div>
+        </div>
+      </div>
+
+    </div><!-- end col-lg-8 -->
+
+    <!-- RIGHT: Info Box -->
+    <div class="col-12 col-lg-4">
+
+      <div class="event-info-box">
+        <h5 style="font-family:'Cairo',sans-serif;color:var(--primary);margin-bottom:1rem">📌 تفاصيل الفعالية</h5>
+
+        <div class="info-row">
+          <i class="bi bi-calendar3 info-icon"></i>
+          <div>
+            <div style="font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem">التاريخ</div>
+            <div style="color:var(--text-muted);font-size:.88rem">20 – 27 أبريل 2026</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <i class="bi bi-clock info-icon"></i>
+          <div>
+            <div style="font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem">الوقت</div>
+            <div style="color:var(--text-muted);font-size:.88rem">9:00 ص – 6:00 م</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <i class="bi bi-geo-alt info-icon"></i>
+          <div>
+            <div style="font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem">المكان</div>
+            <div style="color:var(--text-muted);font-size:.88rem">قاعة المعارض – الطابق الثاني – مبنى الفنون</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <i class="bi bi-person-fill info-icon"></i>
+          <div>
+            <div style="font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem">الجهة المنظمة</div>
+            <div style="color:var(--text-muted);font-size:.88rem">كلية الفنون – الجامعة الافتراضية</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <i class="bi bi-people-fill info-icon"></i>
+          <div>
+            <div style="font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem">عدد المشاركين</div>
+            <div style="color:var(--text-muted);font-size:.88rem">+50 فنان جامعي</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <i class="bi bi-tag-fill info-icon"></i>
+          <div>
+            <div style="font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem">الدخول</div>
+            <div style="color:#1a7f5a;font-weight:700;font-size:.88rem">مجاني للجميع</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Static Map -->
+      <div class="mb-3">
+        <h5 style="font-family:'Cairo',sans-serif;color:var(--primary);margin-bottom:.75rem">🗺️ الموقع</h5>
+        <div style="background:var(--primary-lt);border-radius:var(--radius);height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px dashed var(--border);">
+          <i class="bi bi-map" style="font-size:2.5rem;color:var(--primary);opacity:.5"></i>
+          <p style="font-family:'Cairo',sans-serif;color:var(--text-muted);font-size:.85rem;margin-top:.5rem">قاعة المعارض – الطابق الثاني</p>
+        </div>
+      </div>
+
+    </div><!-- end col-lg-4 -->
+
+  </div><!-- end row -->
+
+  <!-- RELATED EVENTS -->
+  <div class="mt-5">
+    <h4 style="font-family:'Cairo',sans-serif;color:var(--text);margin-bottom:1.5rem">🔗 فعاليات ذات صلة</h4>
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="event-card">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder bg-culture">📚</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">أسبوع الكتاب والقراءة</h5>
+            <p class="card-meta"><i class="bi bi-calendar3"></i> 5 مايو 2026</p>
+            <a href="event.html" class="btn-details">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="event-card">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder bg-music">🎭</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">مسابقة المواهب الجامعية</h5>
+            <p class="card-meta"><i class="bi bi-calendar3"></i> 15 مايو 2026</p>
+            <a href="event.html" class="btn-details">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="event-card">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder bg-culture">🎨</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">ورشة التصوير الفوتوغرافي</h5>
+            <p class="card-meta"><i class="bi bi-calendar3"></i> 20 مايو 2026</p>
+            <a href="event.html" class="btn-details">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- RESERVE MODAL -->
+<div class="modal fade" id="reserveModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:var(--radius);border:none;">
+      <div class="modal-header" style="background:var(--primary);color:#fff;border-radius:var(--radius) var(--radius) 0 0;">
+        <h5 class="modal-title" style="font-family:'Cairo',sans-serif;"><i class="bi bi-ticket-perforated me-2"></i>حجز مكان في الفعالية</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:1.5rem">معرض الفنون التشكيلية الجامعي – 20 أبريل 2026</p>
+        <div class="mb-3">
+          <label class="form-label" style="font-family:'Cairo',sans-serif;font-weight:600">الاسم الكامل</label>
+          <input type="text" id="reserveName" class="form-control" placeholder="أدخل اسمك" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" style="font-family:'Cairo',sans-serif;font-weight:600">الرقم الجامعي</label>
+          <input type="text" id="reserveId" class="form-control" placeholder="أدخل رقمك الجامعي" />
+        </div>
+        <div id="reserveAlert"></div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-family:'Cairo',sans-serif;">إلغاء</button>
+        <button type="button" class="btn-primary-custom" onclick="confirmReserve()" style="font-family:'Cairo',sans-serif;">تأكيد الحجز</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <h5><i class="bi bi-mortarboard-fill me-2"></i>دليل الفعاليات</h5>
+        <p style="font-size:.9rem;opacity:.75">منصة رقمية تجمع فعاليات الجامعة الافتراضية.</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <h5>روابط سريعة</h5>
+        <ul class="list-unstyled" style="font-size:.9rem;line-height:2.2">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="events.html">الفعاليات</a></li>
+          <li><a href="about.html">عن الدليل</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4">
+        <h5>تواصل معنا</h5>
+        <p style="font-size:.88rem;opacity:.75"><i class="bi bi-envelope me-2"></i>events@svuonline.org</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 دليل فعاليات الجامعة الافتراضية – جميع الحقوق محفوظة</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
